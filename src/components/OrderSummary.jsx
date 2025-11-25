@@ -4,7 +4,6 @@ const OrderSummary = ({ movie, session, seats, tickets, total }) => {
   if (!movie) return <div className="w-full h-full border-l border-white/10"></div>;
 
   return (
-    // MUDANÇA: Removi bg-blue-900 e coloquei h-full flex flex-col
     <div className="w-full h-full flex flex-col text-white p-6">
       <h3 className="text-lg font-bold uppercase mb-6 border-b border-white/30 pb-2 tracking-wider text-yellow-100">
         Resumo do Pedido
@@ -22,6 +21,7 @@ const OrderSummary = ({ movie, session, seats, tickets, total }) => {
           <div className="text-xs text-gray-300 mt-2 space-y-0.5">
             <p>SALA {session?.room || '04'}</p>
             <p>{session?.date || 'HOJE'} - {session?.time}</p>
+            {session?.audio && <p className="uppercase text-yellow-200">{session.audio}</p>}
           </div>
         </div>
       </div>
