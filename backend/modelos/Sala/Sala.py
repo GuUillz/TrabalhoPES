@@ -1,4 +1,4 @@
-import TipoSala
+from modelos.Sala.TipoSala import TipoSala
 class Sala:
     def __init__(self,id, nome:str, capacidade:int,obj_tipoSala:TipoSala):
         self.id = id

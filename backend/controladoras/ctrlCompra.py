@@ -46,10 +46,9 @@ class CtrCompra:
         aprovado = self.sistema_pagamento.processar_pagamento(total_valor, nome_tipo_pagamento)
 
         if aprovado:
-            # Cria objeto TipoPagamento na hora (ou buscaria de um catálogo)
             obj_pagamento = TipoPagamento(1, nome_tipo_pagamento)
             
-            # Cria a Compra
+
             nova_compra = Compra(str(uuid.uuid4()), total_valor, obj_pagamento, obj_sessao)
             
             for item in ingressos_temp:

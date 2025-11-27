@@ -1,6 +1,6 @@
 from datetime import datetime
 from modelos.TipoPagamento import TipoPagamento
-from Sessao.Sessao import Sessao
+from modelos.Sessao.Sessao import Sessao
 class Compra:
     def __init__(self, id, total:float, obj_tipoPagamento:TipoPagamento, obj_sessao:Sessao):
         self.id = id

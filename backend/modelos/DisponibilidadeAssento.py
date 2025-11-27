@@ -1,7 +1,8 @@
-from Sessao.Sessao import Sessao
-import Assento
+from modelos.Assento.Assento import Assento
+
 class DisponibilidadeAssento:
-    def __init__(self, sessao:Sessao):
+ 
+    def __init__(self, sessao):
         self.sessao = sessao
         self.assentos_ocupados = [] 
 
